@@ -93,53 +93,32 @@ console.log(sameNum);
 
 
 /*===========================================*/
+// Дан двумерный массив. Число строк равно числу столбцов. Найти сумму элементов, 
+// расположенных в области песочных часов (вертикальных – синий цвет на рисунке и горизонтальных – белый цвет).
 
-// function rand (min, max) {
-//   return Math.floor(Math.random() * (max - min)) + min;
-// }
+// Тут только вертикальные часы 
 
-// function getMatrix(size, min, max) {
-//   var arr = [];
-//   for (var i = 0; i < size; i++) {
-//     arr[i] = [];
-//     for (var j = 0; j < size; j++) {
-//       var randomValue = rand(min, max);    
-//       arr[i].push(randomValue);
-//     }
-
-//   }
-//   return arr;
-// }
-
-// var arr3 = getMatrix(3, 0, 100);
-
-
-var arr = [
-   [1,  2,  3,  4,  5, 1, 7],
-   [6,  7,  8,  9,  10, 2, 8],
-   [11, 12, 13, 14, 15, 3, 9],
-   [16, 17, 18, 19, 20, 4, 6],
-   [21, 22, 23, 24, 25, 5, 6],
-   [1,  12, 12, 12, 12, 12, 4],
-   [1,  12, 12, 12, 12, 12, 4]  
-   
+var arr3 = [
+  [1,  2,  3,  4,   5],
+  [6,  7,  8,  9,  10],
+  [11, 12, 13, 14, 15],
+  [16, 17, 18, 19, 20],
+  [21, 22, 23, 24, 25]   
 ];
-
-
 
 
 var sum = 0;
 
-	for (var i = 0; i < arr.length; i++) {
-		if (i < arr.length/2) {
-			for (var j = i; j <= (arr.length - 1) - i; j++) {			
-				console.log('top1: ' + arr[i][j]);
-				sum += arr[i][j];
+	for (var i = 0; i < arr3.length; i++) {
+		if (i < arr3.length/2) {
+			for (var j = i; j <= (arr3.length - 1) - i; j++) {			
+				console.log('top1: ' + arr3[i][j]);
+				sum += arr3[i][j];
 			}
 		} else {
-			for(var j = (arr.length - 1) - i; j <= i; j++  ) {
-				console.log('bottom1: ' + arr[i][j]);
-				sum += arr[i][j];
+			for(var j = (arr3.length - 1) - i; j <= i; j++  ) {
+				console.log('bottom1: ' + arr3[i][j]);
+				sum += arr3[i][j];
 			}
 		} 
 	}
