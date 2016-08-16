@@ -114,3 +114,35 @@ console.log(sameNum);
 // var arr3 = getMatrix(3, 0, 100);
 
 
+var arr = [
+   [1,  2,  3,  4,  5, 1, 7],
+   [6,  7,  8,  9,  10, 2, 8],
+   [11, 12, 13, 14, 15, 3, 9],
+   [16, 17, 18, 19, 20, 4, 6],
+   [21, 22, 23, 24, 25, 5, 6],
+   [1,  12, 12, 12, 12, 12, 4],
+   [1,  12, 12, 12, 12, 12, 4]  
+   
+];
+
+
+
+
+var sum = 0;
+
+	for (var i = 0; i < arr.length; i++) {
+		if (i < arr.length/2) {
+			for (var j = i; j <= (arr.length - 1) - i; j++) {			
+				console.log('top1: ' + arr[i][j]);
+				sum += arr[i][j];
+			}
+		} else {
+			for(var j = (arr.length - 1) - i; j <= i; j++  ) {
+				console.log('bottom1: ' + arr[i][j]);
+				sum += arr[i][j];
+			}
+		} 
+	}
+
+
+console.log(sum);
